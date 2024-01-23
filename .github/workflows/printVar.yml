@@ -1,0 +1,13 @@
+name: "Test Github variables"
+on:
+  workflow_dispatch:
+  
+jobs:
+  test-var:
+    runs-on: ubuntu-latest
+    name: Test GH var
+    steps:
+      - name: Print Github variables
+        run: |
+            echo "Github repo value: ${{ github.repository }}"
+        shell: bash
